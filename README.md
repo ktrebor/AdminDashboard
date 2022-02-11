@@ -1,1 +1,1 @@
-# AdminDashboard
+# AdminDashboard - Project Assignment from The Odin Project

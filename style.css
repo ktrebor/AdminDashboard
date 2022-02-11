@@ -1,0 +1,75 @@
+@import url(https://fonts.googleapis.com/icon?family=Material+Icons);
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Roboto&display=swap');
+
+:root {
+   --main-white: #eff6ff;
+   --blue-bg: #3b82f6;
+}
+
+*, 
+*::after, 
+*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr 6fr;
+    height: 100vh;
+}
+
+.sidebar {
+    background-color: var(--blue-bg);
+    grid-row: 1 / 3;
+    padding-left: 20px;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.header {
+    background-color: yellow;
+    grid-row: 1 / 2;
+}
+
+.content {
+    background-color: bisque;
+    grid-row: 2 / 3;
+}
+
+/* Main Menu */
+
+
+.logo {
+    color: var(--main-white);
+    font-size: 2rem;
+}
+
+.main-menu {
+    line-height: 2.7;
+}
+
+.material-icons {
+    padding-right: 15px;
+    display: inline-flex;
+    align-self: center;
+    top: .165em;
+    position: relative;
+}
+
+a {
+    color: var(--main-white); 
+}
+
+.nav-links,
+.nav-links > i {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
