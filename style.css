@@ -2,9 +2,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter&family=Roboto&display=swap');
 
 :root {
-   --main-white: #eff6ff;
+   --main-white: #f8fafc;
    --blue-bg: #3b82f6;
    --main-black: #171717;
+   --shadow-black: #27272a;
+   --grey-bg: #e5e7eb;
+   --border-yellow: #eab308;
 }
 
 *, 
@@ -38,10 +41,11 @@
 .header {
     background-color: var(--main-white);
     grid-row: 1 / 2;
+    box-shadow: var(--shadow-black) 0px 0px 100px 0px;
 }
 
 .content {
-    background-color: bisque;
+    background-color: var(--grey-bg);
     grid-row: 2 / 3;
 }
 
@@ -146,3 +150,59 @@ button {
     font-weight: bold;
     font-size: 1.4rem;
 }
+
+/* Content */
+.content {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 25px;
+    padding: 25px;
+}
+
+.projects {
+   grid-area: 1 / 1 / 3 / 2;
+}
+
+.announcements {
+   grid-area: 1 / 2 / 2 / 2;
+}
+
+.trending {
+    grid-area: 2 / 2 / 3 / 3;
+}
+
+.trending-item > img {
+    width: 50px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 25px;
+    padding-top: 20px;
+}
+
+.card {
+    background-color: var(--main-white);
+    padding: 20px;
+    border-radius: 10px;
+    border-left: 10px solid var(--border-yellow);
+}
+
+.card p {
+    font-size: 0.8rem;
+    color: var(--shadow-black);
+    padding-top: 10px;
+}
+
+.card h5 {
+    font-size: 1rem;
+}
+
+.card-icons > a {
+    color: var(--main-black)
+}
+.card-icons {
+    text-align: right;
+}
+
