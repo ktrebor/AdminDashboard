@@ -4,6 +4,7 @@
 :root {
    --main-white: #eff6ff;
    --blue-bg: #3b82f6;
+   --main-black: #171717;
 }
 
 *, 
@@ -35,7 +36,7 @@
 }
 
 .header {
-    background-color: yellow;
+    background-color: var(--main-white);
     grid-row: 1 / 2;
 }
 
@@ -44,7 +45,7 @@
     grid-row: 2 / 3;
 }
 
-/* Main Menu */
+/* Side Menu */
 
 
 .logo {
@@ -72,4 +73,76 @@ a {
 .nav-links > i {
     font-size: 1.2rem;
     font-weight: bold;
+}
+
+/* Header */
+.header {
+    display: flex;
+    flex-direction: column;
+    padding: 0px 20px 20px 20px;
+}
+
+.top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.account > a {
+    color: var(--main-black);
+}
+
+.avatar {
+    max-width: 50px;
+}
+
+.account {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.avatar-bottom {
+    max-width: 80px;
+}
+
+.buttons {
+    display: flex;
+    gap: 50px;
+}
+
+button {
+  color: inherit;
+  font: inherit;
+}
+
+.btn {
+    background-color: var(--blue-bg);
+    color: var(--main-white);
+    font-weight: bold;
+    padding: 15px 40px;
+    border-radius: 99em;
+    border: none;
+}
+
+#welcome-message {
+    font-weight: bold;
+}
+
+.username-bottom {
+    font-weight: bold;
+    font-size: 1.4rem;
 }
