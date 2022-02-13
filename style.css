@@ -5,9 +5,10 @@
    --main-white: #f8fafc;
    --blue-bg: #3b82f6;
    --main-black: #171717;
-   --shadow-black: #27272a;
+   --shadow-black: rgba(100, 100, 111, 0.2);
    --grey-bg: #e5e7eb;
    --border-yellow: #eab308;
+   --main-grey: #44403c;
 }
 
 *, 
@@ -83,7 +84,7 @@ a {
 .header {
     display: flex;
     flex-direction: column;
-    padding: 0px 20px 20px 20px;
+    padding: 20px;
 }
 
 .top {
@@ -91,6 +92,16 @@ a {
     align-items: center;
     justify-content: space-between;
 }
+
+.search > #search {
+    border: 0;
+    background-color: var(--grey-bg);
+    padding: 10px 10px;
+    border-radius: 50px;
+    outline-color: var(--border-yellow);
+    width: 500px;
+    
+  }
 
 .account > a {
     color: var(--main-black);
@@ -155,16 +166,18 @@ button {
 .content {
     display: grid;
     grid-template-columns: 3fr 1fr;
+    grid-template-rows: min-content 1fr;
     gap: 25px;
     padding: 25px;
 }
 
 .projects {
    grid-area: 1 / 1 / 3 / 2;
+   
 }
 
 .announcements {
-   grid-area: 1 / 2 / 2 / 2;
+   grid-area: 1 / 2 / 2 / 3;
 }
 
 .trending {
@@ -175,9 +188,11 @@ button {
     width: 50px;
 }
 
+/* project-cards */
+
 .cards {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 25px;
     padding-top: 20px;
 }
@@ -187,12 +202,17 @@ button {
     padding: 20px;
     border-radius: 10px;
     border-left: 10px solid var(--border-yellow);
+    box-shadow: var(--shadow-black) 0px 7px 29px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .card p {
-    font-size: 0.8rem;
-    color: var(--shadow-black);
+    font-size: 0.9rem;
+    color: var(--main-grey);
     padding-top: 10px;
+    overflow: hidden;
 }
 
 .card h5 {
@@ -202,7 +222,40 @@ button {
 .card-icons > a {
     color: var(--main-black)
 }
+
 .card-icons {
     text-align: right;
 }
 
+/* announcements */
+.announcements h3,
+.trending h3 {
+    padding-bottom: 20px;
+}
+
+.items {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: var(--main-white);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: var(--shadow-black) 0px 7px 29px 0px;
+}
+
+.announcement-item p {
+    font-size: 0.9rem;
+    color: var(--main-grey);
+    padding-top: 10px;
+}
+
+.announcement-item h6 {
+    font-size: 0.9rem;
+}
+
+/* trending */
+.trending-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
